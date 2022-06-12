@@ -33,5 +33,28 @@ class PkgTarget{
 
         return $stmt;
     }
+
+    public function getTargetById($idTarget){
+        $stmt = $this->conn->prepare("SELECT * FROM pkgtarget WHERE idTarget=:idTarget");
+        $stmt->bindParam(':idTarget', $idTarget);
+        $stmt->execute();
+
+        return $stmt;
+    }
+
+    public function updateStatus($idTarget){
+        try{
+            $status = true;
+            $stmt = $this->conn->prepare("UPDATE pkgtarget SET status=:status WHERE idTarget=:idTarget");
+            $stmt->bindParam(':status', $status);
+            $stmt->bindParam(':idTarget', $idTarget);
+            $stmt->execute();
+
+            return true;
+        }
+        catch (PDOException $e) {
+            return false;
+        }
+    }
 }
 ?>

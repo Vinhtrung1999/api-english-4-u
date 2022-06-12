@@ -23,12 +23,12 @@ class Sentence{
         }
     }
 
-    // public function getTargetByUser($username){
-    //     $stmt = $this->conn->prepare("SELECT * FROM pkgtarget WHERE username=:username");
-    //     $stmt->bindParam(':username', $username);
-    //     $stmt->execute();
+    public function getSentenceByTarget($idTarget){
+        $stmt = $this->conn->prepare("SELECT * FROM sentence WHERE idTarget=:idTarget");
+        $stmt->bindParam(':idTarget', $idTarget);
+        $stmt->execute();
 
-    //     return $stmt;
-    // }
+        return $stmt;
+    }
 }
 ?>
