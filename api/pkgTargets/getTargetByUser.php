@@ -28,7 +28,8 @@
                         'username' => $username,
                         'title' => $title,
                         'target' => (int)$target,
-                        'status' => $status
+                        'status' => $status,
+                        'qty' => $qty
                     );
 
                     array_push($returnArray['data'], $temp);

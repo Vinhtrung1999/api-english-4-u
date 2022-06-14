@@ -37,7 +37,7 @@
 
             else{
                 $returnArray['code'] = 1;
-                $returnArray['message'] = 'username or password was existed';
+                $returnArray['message'] = 'username was existed';
                 echo json_encode($returnArray);
             }
 

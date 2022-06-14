@@ -32,7 +32,8 @@
                     'username' => $username,
                     'title' => $title,
                     'target' => (int)$target,
-                    'status' => false
+                    'status' => false,
+                    'qty' => 0
                 );
                 $returnArray['code'] = 0;
                 array_push($returnArray['data'], $tmp);
@@ -41,7 +42,7 @@
 
             else{
                 $returnArray['code'] = 1;
-                $returnArray['message'] = 'username not exist';
+                $returnArray['message'] = 'target not exist';
                 echo json_encode($returnArray);
             }
 

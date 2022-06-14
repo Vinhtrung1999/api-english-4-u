@@ -55,6 +55,7 @@
                             $result_updateStatus = $pkgTarget->updateStatus($idTarget);
                         }
 
+                        $result_updateQty = $pkgTarget->updateQty($idTarget);
                         echo json_encode($returnArray);
                     }
 
